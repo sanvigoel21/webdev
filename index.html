@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Expense Tracker</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #cdc4c7, #ffd6eb);
+        }
+
+        .container {
+            width: 1100px;
+            margin: 40px auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            color: #d63384;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #a61e4d;
+        }
+
+        /* Summary Cards */
+        .summary-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .summary-card {
+            width: 30%;
+            background: #fff0f6;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-10px);
+            background: #ffe3f3;
+        }
+
+        .summary-card h3 {
+            color: #c9184a;
+            margin-bottom: 10px;
+        }
+
+        .summary-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4d6d;
+        }
+
+        /* Sections */
+        .expense-section,
+        .transactions-section {
+            background: #fff0f6;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+            margin-bottom: 50px;
+        }
+
+        .expense-section h2,
+        .transactions-section h2 {
+            color: #d63384;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Expense Items */
+        .expense-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid #ffc2d1;
+            font-weight: 500;
+        }
+
+        .expense-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Transactions */
+        .transaction-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ffc2d1;
+            transition: 0.3s;
+        }
+
+        .transaction-card:last-child {
+            border-bottom: none;
+        }
+
+        .transaction-card:hover {
+            transform: translateX(8px);
+        }
+
+        .transaction-info h4 {
+            margin: 0;
+            color: #c9184a;
+        }
+
+        .transaction-info p {
+            margin: 4px 0 0;
+            font-size: 13px;
+            color: #a61e4d;
+        }
+
+        .amount {
+            font-weight: bold;
+            color: #ff4d6d;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1> My  Expense Tracker </h1>
+        <p>Track Your Monthly Spending </p>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="summary-container">
+        <div class="summary-card">
+            <h3>Total Spent</h3>
+            <p>₹ 11,200</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Highest Category</h3>
+            <p>Food</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Current Month</h3>
+            <p>March 2026</p>
+        </div>
+    </div>
+
+    <!-- Expense Categories -->
+    <div class="expense-section">
+        <h2> Expense Categories</h2>
+
+        <div class="expense-item">
+            <span>Food</span>
+            <span>₹ 4,500</span>
+        </div>
+
+        <div class="expense-item">
+            <span>Transport</span>
+            <span>₹ 2,000</span>
+        </div>
+
+        <div class="expense-item">
+            <span>Shopping</span>
+            <span>₹ 3,200</span>
+        </div>
+
+        <div class="expense-item">
+            <span>Entertainment</span>
+            <span>₹ 1,500</span>
+        </div>
+    </div>
+
+    <!-- Recent Transactions -->
+    <div class="transactions-section">
+        <h2> Recent Transactions</h2>
+
+        <div class="transaction-card">
+            <div class="transaction-info">
+                <h4>Eating Outside</h4>
+                <p>3 March 2026</p>
+            </div>
+            <div class="amount">- ₹ 1,250</div>
+        </div>
+
+        <div class="transaction-card">
+            <div class="transaction-info">
+                <h4>Uber Ride</h4>
+                <p>2 March 2026</p>
+            </div>
+            <div class="amount">- ₹ 350</div>
+        </div>
+
+        <div class="transaction-card">
+            <div class="transaction-info">
+                <h4>Movie Tickets</h4>
+                <p>1 March 2026</p>
+            </div>
+            <div class="amount">- ₹ 800</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

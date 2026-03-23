@@ -1,0 +1,84 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Search Filter</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            list-style: none;
+            padding: 8px;
+            background: white;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Live Search Filter</h2>
+
+        <input type="text" id="searchBox" placeholder="Search items...">
+
+        <ul id="itemList">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Orange</li>
+            <li>Mango</li>
+            <li>Grapes</li>
+            <li>Pineapple</li>
+        </ul>
+
+        <p id="noResult" style="display: none;">No results found</p>
+    </div>
+
+    <script>
+        const searchBox = document.getElementById("searchBox");
+        const items = document.querySelectorAll("#itemList li");
+        const noResult = document.getElementById("noResult");
+
+        searchBox.addEventListener("keyup", function () {
+
+            let input = searchBox.value.toLowerCase();
+            let found = false;
+
+            items.forEach(function (item) {
+                let text = item.textContent.toLowerCase();
+
+                if (text.includes(input)) {
+                    item.style.display = "block";
+                    found = true;
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            if (!found) {
+                noResult.style.display = "block";
+            } else {
+                noResult.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
+```
